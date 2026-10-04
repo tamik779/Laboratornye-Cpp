@@ -1,0 +1,31 @@
+# Visual Studio
+.vs/
+.vscode/
+
+# Файлы сборки Visual Studio
+Debug/
+Release/
+x64/
+x86/
+out/
+bin/
+obj/
+
+# Пользовательские файлы Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Файлы отладки
+*.pdb
+*.ilk
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
