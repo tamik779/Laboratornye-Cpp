@@ -3,7 +3,7 @@ int main() {
 	setlocale(LC_ALL, "ru");
 	double a;
 	double V;
-	std::cout << "Введите ребро куба в см:";
+	std::cout << "Введите ребро куба в см:";//проверка
 	std::cin >> a;
 	V = a * a * a;
 	std::cout << "Объем куба:" << V << std::endl;
