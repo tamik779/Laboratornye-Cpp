@@ -10,7 +10,7 @@ int main() {
     srand(time(0));
     int a = rand() % 11;
     int b;
-    cout << "Угадай число от 0 до 10: ";
+    cout << "Угадай число от 1 до 10: ";
     while (true) {
         if (!(cin >> b)) {
             cout << "Введи целое число: ";
@@ -18,8 +18,8 @@ int main() {
             cin.ignore(1000, '\n');
             continue;
         }
-        if (b < 0 || b > 10) {
-            cout << "Введи число от 0 до 10: ";
+        if (b < 1 || b > 10) {
+            cout << "Введи число от 1 до 10: ";
         }
         else if (b == a) {
             cout << "Угадал!";
