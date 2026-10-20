@@ -5,16 +5,12 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-
 int main() {
     setlocale(LC_ALL, "ru");
     srand(time(0));
-
     int a = rand() % 11;
     int b;
-
     cout << "Угадай число от 0 до 10: ";
-
     while (true) {
         if (!(cin >> b)) {
             cout << "Введи целое число: ";
@@ -22,7 +18,6 @@ int main() {
             cin.ignore(1000, '\n');
             continue;
         }
-
         if (b < 0 || b > 10) {
             cout << "Введи число от 0 до 10: ";
         }
@@ -37,6 +32,5 @@ int main() {
             cout << "Меньше: ";
         }
     }
-
     return 0;
 }
