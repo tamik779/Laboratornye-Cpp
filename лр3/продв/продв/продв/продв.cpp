@@ -7,23 +7,36 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "ru");
     srand(time(0));
 
     int a = rand() % 11;
     int b;
 
     cout << "Угадай число от 0 до 10: ";
-    cin >> b;
 
-    if (b < 0 || b > 10) {
-        cout << "Ошибка! Введи число от 0 до 10.";
+    while (true) {
+        if (!(cin >> b)) {
+            cout << "Введи целое число: ";
+            cin.clear();
+            cin.ignore(1000, '\n');
+            continue;
+        }
+
+        if (b < 0 || b > 10) {
+            cout << "Введи число от 0 до 10: ";
+        }
+        else if (b == a) {
+            cout << "Угадал!";
+            break;
+        }
+        else if (b < a) {
+            cout << "Больше: ";
+        }
+        else {
+            cout << "Меньше: ";
+        }
     }
-    else if (a == b) {
-        cout << "Угадал!";
-    }
-    else {
-        cout << "Не угадал!";
-    }
+
     return 0;
 }
