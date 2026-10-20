@@ -10,7 +10,10 @@ int main() {
 
     cout << "Введите стороны треугольника: ";
     cin >> a >> b >> c;
-
+    if (cin.fail()) {
+        cout << "Ошибка: нужно ввести три числа." << endl;
+        return 1;
+    }
     if (a < b + c && b < a + c && c < a + b)
         cout << "Существует" << endl;
     else
